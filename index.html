@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="./index.js"></script>
-    <title>Celebration Card!</title>
+    <script defer src="index.js"></script>
+    <title>Celebration Card</title>
 </head>
 <body>
-    
+    <form class="showForm">
+        <section>
+            <label for="greeting">Greeting: </label>
+            <input type="text" placeholder="Enter your greeting!" id="greeting">
+        </section>
+        <section>
+            <span>Type of event:</span><br>
+            <label for="birthday">A birthday!</label>
+            <input type="radio" name="eventType" id="birthday" value="birthday"><br>
+            <label for="wedding">A wedding!</label>
+            <input type="radio" name="eventType" id="wedding" value="wedding"><br>
+            <label for="new job">A new job!</label>
+            <input type="radio" name="eventType" id="new job" value="new job">
+        </section>
+        <section style="display:flex">
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="2"placeholder="Enter your message!"></textarea>
+        </section>
+        <br>
+        <input type="submit" value="Generate card!">
+    </form>
+    <section id="card">
+        <h1 id="card-greeting"></h1>
+        <h2 id="card-event"></h2>
+        <p  id="card-message"></p>
+    </section>
 </body>
 </html>
