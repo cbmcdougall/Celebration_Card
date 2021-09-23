@@ -6,3 +6,7 @@
     visibility: hidden;
     position: fixed;
 }
+#card-body {
+    width: 400px;
+    height: 200px;
+}
