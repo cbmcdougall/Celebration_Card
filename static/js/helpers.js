@@ -1,19 +1,3 @@
-const inputForm=document.querySelector("form");
-inputForm.addEventListener("submit", handleFormSubmit);
-
-const newForm=document.getElementById("newCard");
-newForm.addEventListener("submit", submitNewForm);
-
-function handleFormSubmit(e) {
-    e.preventDefault();
-    const greeting = e.target.greeting.value;
-    const event = e.target.eventType.value;
-    const message = e.target.message.value;
-    inputForm.className="hideForm";
-    newForm.className="showForm";
-    renderCard(greeting,event,message);
-}
-
 function renderCard(greeting,event,message) {
     const cardGreeting = document.getElementById("card-greeting");
     const cardEvent = document.getElementById("card-event");
@@ -38,14 +22,6 @@ function renderCard(greeting,event,message) {
     cardMessage.textContent = message;
 }
 
-function submitNewForm(e) {
-    e.preventDefault();
-    inputForm.className="showForm";
-    newForm.className="hideForm";
-    deleteCard();
-    clearForm();
-}
-
 function deleteCard() {
     const cardGreeting = document.getElementById("card-greeting");
     const cardEvent = document.getElementById("card-event");
@@ -62,4 +38,10 @@ function clearForm() {
     greetingForm.value = "";
     eventForm.forEach(event => { event.checked = false });
     messageForm.value = "";   
+}
+
+module.exports = {
+    renderCard,
+    deleteCard,
+    clearForm
 }

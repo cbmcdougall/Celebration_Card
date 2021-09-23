@@ -1,0 +1,17 @@
+{
+  "name": "celebration-card",
+  "version": "1.0.0",
+  "description": "Create a celebration card from the input form!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js\" \"http-server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "watchify": "^4.0.0"
+  }
+}
