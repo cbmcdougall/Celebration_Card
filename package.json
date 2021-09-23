@@ -1,7 +1,7 @@
 {
-  "name": "js",
+  "name": "celebration-card",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create a celebration card from the input form!",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"watchify ./static/js/index.js -o bundle.js\" \"http-server\"",
