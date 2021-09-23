@@ -1,8 +1,12 @@
-.showForm {
+.showItem {
     visibility: visible;
     position: sticky;   
 }
-.hideForm {
+.hideItem {
     visibility: hidden;
     position: fixed;
+}
+#card-body {
+    width: 400px;
+    height: 200px;
 }
