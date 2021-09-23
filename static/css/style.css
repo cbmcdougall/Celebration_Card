@@ -1,8 +1,8 @@
-.showForm {
+.showItem {
     visibility: visible;
     position: sticky;   
 }
-.hideForm {
+.hideItem {
     visibility: hidden;
     position: fixed;
 }

@@ -1,23 +1,21 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 const {renderCard, deleteCard, clearForm} = require("./helpers");
+const inputForm=document.querySelector("form");
+const card=document.getElementById("card");
 
 function handleFormSubmit(e) {
-    const inputForm=document.querySelector("form");
-    const newForm=document.getElementById("newCard");
     e.preventDefault();
     const greeting = e.target.greeting.value;
     const event = e.target.eventType.value;
     const message = e.target.message.value;
-    inputForm.className="hideForm";
-    newForm.className="showForm";
+    inputForm.className="hideItem";
+    card.className="showItem";
     renderCard(greeting,event,message);
 }
 function submitNewForm(e) {
-    const inputForm=document.querySelector("form");
-    const newForm=document.getElementById("newCard");
     e.preventDefault();
-    inputForm.className="showForm";
-    newForm.className="hideForm";
+    inputForm.className="showItem";
+    card.className="hideItem";
     deleteCard();
     clearForm();
 }
@@ -27,10 +25,11 @@ module.exports = {
     submitNewForm 
 }
 },{"./helpers":2}],2:[function(require,module,exports){
+const cardGreeting = document.getElementById("card-greeting");
+const cardEvent = document.getElementById("card-event");
+const cardMessage = document.getElementById("card-message");
+
 function renderCard(greeting,event,message) {
-    const cardGreeting = document.getElementById("card-greeting");
-    const cardEvent = document.getElementById("card-event");
-    const cardMessage = document.getElementById("card-message");
     let eventText;
     switch (event) {
         case "birthday":
@@ -52,9 +51,6 @@ function renderCard(greeting,event,message) {
 }
 
 function deleteCard() {
-    const cardGreeting = document.getElementById("card-greeting");
-    const cardEvent = document.getElementById("card-event");
-    const cardMessage = document.getElementById("card-message");
     cardGreeting.textContent = "";
     cardEvent.textContent = "";
     cardMessage.textContent = "";
