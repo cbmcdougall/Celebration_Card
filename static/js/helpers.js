@@ -1,7 +1,8 @@
+const cardGreeting = document.getElementById("card-greeting");
+const cardEvent = document.getElementById("card-event");
+const cardMessage = document.getElementById("card-message");
+
 function renderCard(greeting,event,message) {
-    const cardGreeting = document.getElementById("card-greeting");
-    const cardEvent = document.getElementById("card-event");
-    const cardMessage = document.getElementById("card-message");
     let eventText;
     switch (event) {
         case "birthday":
@@ -23,9 +24,6 @@ function renderCard(greeting,event,message) {
 }
 
 function deleteCard() {
-    const cardGreeting = document.getElementById("card-greeting");
-    const cardEvent = document.getElementById("card-event");
-    const cardMessage = document.getElementById("card-message");
     cardGreeting.textContent = "";
     cardEvent.textContent = "";
     cardMessage.textContent = "";

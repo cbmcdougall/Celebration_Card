@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="./static/PartyPopper.png" type="image/x-icon">
 </head>
 <body>
-    <form class="showForm">
+    <form class="showItem">
         <section>
             <label for="greeting">Greeting: </label>
             <input type="text" placeholder="Enter your greeting!" id="greeting">
@@ -32,11 +32,11 @@
             <input type="submit" value="Generate card!">
         </section>
     </form>
-    <section id="card">
+    <section id="card" class="hideItem">
         <h1 id="card-greeting"></h1>
         <h3 id="card-event"></h3>
-        <p  id="card-message"></p>
-        <form id="newCard" class="hideForm">
+        <p id="card-message"></p>
+        <form id="newCard">
             <input type="submit" value="Make new card">
         </form>
     </section>
