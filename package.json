@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^6.2.1",
+    "concurrently": "^7.0.0",
     "watchify": "^4.0.0"
   }
 }
